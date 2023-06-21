@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip A Coin</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="css/quizz.css">
+    <style>
+        /*menu responsivo*/
+ .headeru {
+  background-color: #ccc;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  }
+  
+  .headeru ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ccc;
+  width: 100%;
+  height: 100%;
+  
+  }
+  
+  .headeru li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  
+  }
+  
+  .headeru li a:hover,
+  .headeru .menu-btn:hover {
+  background-color: #f4f4f4;
+  }
+  
+  .headeru .logo {
+  display: block;
+  float: left;
+  padding: 3px 20px;
+  text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .headeru .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .headeru .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  }
+  
+  .headeru .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+  }
+  
+  .headeru .menu-icon .navicon:before,
+  .headeru .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  }
+  
+  .headeru .menu-icon .navicon:before {
+  top: 5px;
+  }
+  
+  .headeru .menu-icon .navicon:after {
+  top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .headeru .menu-btn {
+  display: none;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu {
+  max-height: 100%;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .headeru .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 1370px) {
+  .headeru li {
+    float: left;
+  }
+  .headeru li a {
+    padding: 20px 30px;
+  }
+  .headeru .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .headeru .menu-icon {
+    display: none;
+  }
+  }
+    </style>
+</head>
+<body>
+    <div  class="headeru">
+        <img src="img.html/home.png" alt="Logo - Genshin Impact" class="logo" width="5%">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="index.html">Site Oficial</a></li>
+          <li><a href="atividades.html">Atividades</a></li>
+          <li><a href="https://series-clubb-6xlqcpka7-raquellopes10.vercel.app/">Noticias</a></li>
+        
+          
+        
+        </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="stats">
+            <p id="heads-count">Heads: 0</p>
+            <p id="tails-count">Tails: 0</p>
+        </div>
+        <div class="coin" id="coin">
+            <div class="heads">
+                <img src="img.html/theflash.jpg">
+            </div>
+            <div class="tails">
+                <img src="img.html/seria.jpg">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="flip-button">
+                Flip Coin
+            </button>
+            <button id="reset-button">
+                Reset
+            </button>
+        </div>
+    </div>
+    <!--Script-->
+    <script src="javas/quizz.js"></script>
+</body>
+</html>

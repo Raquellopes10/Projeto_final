@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<head>
+  <link rel="shortcut icon" href="img.html/home.png" type="Image/x-icon" />
+  <style>
+    @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eceef1;
+  font-family: "Slabo 27px", serif;
+  color: #333a45;
+}
+
+.wrapper {
+  margin: 5em auto;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  padding: 30px 30px 0;
+  text-align: center;
+}
+.header__title {
+  margin: 30px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.header__subtitle {
+  margin: 0;
+  font-size: 1.5em;
+  color: #949fb0;
+  font-family: "Yesteryear", cursive;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.cards {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card {
+  margin: 15px;
+  width: calc((100% / 3) - 30px);
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 991px) {
+  .card {
+    width: calc((100% / 2) - 30px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+}
+.card:hover .card__inner {
+  background-color: #b85d1c;
+  transform: scale(1.05);
+}
+.card__inner {
+  width: 100%;
+  padding: 30px;
+  position: relative;
+  cursor: pointer;
+  background-color: black;
+  color:white;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.card__inner:after {
+  transition: all 0.3s ease-in-out;
+}
+.card__inner .fa {
+  width: 100%;
+  margin-top: 0.25em;
+}
+.card__expander {
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: black;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.card__expander .fa {
+  font-size: 0.75em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.card__expander .fa:hover {
+  opacity: 0.9;
+}
+.card.is-collapsed .card__inner:after {
+  content: "";
+  opacity: 0;
+}
+.card.is-collapsed .card__expander {
+  max-height: 0;
+  min-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  opacity: 0;
+}
+.card.is-expanded .card__inner {
+  background-color: #b85d1c;
+}
+.card.is-expanded .card__inner:after {
+  content: "";
+  opacity: 1;
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 15px);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #333a45;
+}
+.card.is-expanded .card__inner .fa:before {
+  content: "";
+}
+.card.is-expanded .card__expander {
+  max-height: 1000px;
+  min-height: 200px;
+  overflow: visible;
+  margin-top: 30px;
+  opacity: 1;
+}
+.card.is-expanded:hover .card__inner {
+  transform: scale(1);
+}
+.card.is-inactive .card__inner {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.card.is-inactive:hover .card__inner {
+  background-color: #949fb0;
+  transform: scale(1);
+}
+
+@media screen and (min-width: 992px) {
+  .card:nth-of-type(3n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+
+  .card:nth-of-type(3n+3) .card__expander {
+    margin-left: calc(-200% - 60px);
+  }
+
+  .card:nth-of-type(3n+4) {
+    clear: left;
+  }
+
+  .card__expander {
+    width: calc(300% + 60px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .card:nth-of-type(2n+2) .card__expander {
+    margin-left: calc(-100% - 30px);
+  }
+
+  .card:nth-of-type(2n+3) {
+    clear: left;
+  }
+
+  .card__expander {
+    width: calc(200% + 30px);
+  }
+}
+.letra{
+  text-decoration: none;
+  color: white;
+}
+       /*menu responsivo*/
+       .headeru {
+  background-color: #ccc;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  }
+  
+  .headeru ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ccc;
+  
+  }
+  
+  .headeru li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  
+  }
+  
+  .headeru li a:hover,
+  .headeru .menu-btn:hover {
+  background-color: #f4f4f4;
+  }
+  
+  .headeru .logo {
+  display: block;
+  float: left;
+  padding: 3px 20px;
+  text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .headeru .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .headeru .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  }
+  
+  .headeru .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+  }
+  
+  .headeru .menu-icon .navicon:before,
+  .headeru .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  }
+  
+  .headeru .menu-icon .navicon:before {
+  top: 5px;
+  }
+  
+  .headeru .menu-icon .navicon:after {
+  top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .headeru .menu-btn {
+  display: none;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu {
+  max-height: 100%;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .headeru .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 1370px) {
+  .headeru li {
+    float: left;
+  }
+  .headeru li a {
+    padding: 20px 30px;
+  }
+  .headeru .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .headeru .menu-icon {
+    display: none;
+  }
+  }
+  </style>
+</head>
+
+
+
+
+<body>
+  <div  class="headeru">
+    <img src="img.html/home.png" alt="Logo - Genshin Impact" class="logo" width="5%">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="index.html">Site Oficial</a></li>
+      <li><a href="atividades.html">Atividades</a></li>
+      <li><a href="https://series-clubb-6xlqcpka7-raquellopes10.vercel.app/">Noticias</a></li>
+    
+      
+    
+    </ul>
+    </div>
+</div>
+<div class="wrapper">
+
+  <div class="header">
+    <h1 class="header__title">Atividades</h1>
+    <h2 class="header__subtitle"></h2>
+  </div>
+
+  <div class="cards">
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span><a class="letra" href="form.html"> Forms</a> </span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span> <a class="letra" href="quizz.html">Quiz</a></span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span> <a class="letra" href="placar.html">Placar</a></span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    <div class=" card [ is-collapsed ] ">
+      <div class="card__inner [ js-expander ]">
+        <span> <a class="letra" href="galery.html">Galery</a></span>
+        <i class="fa fa-folder-o"></i>
+      </div>
+      <div class="card__expander">
+        <i class="fa fa-close [ js-collapser ]"></i>
+        Expander
+      </div>
+    </div>
+
+    
+  </div>
+
+</div>
+</body>

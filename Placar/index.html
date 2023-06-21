@@ -1,0 +1,361 @@
+<html lang="pt-br"> 
+    <head> 
+       <title> Home </title>
+       <meta charset="utf-8">
+       <meta name="author" content="Raquel">
+       <meta name="description" content="lista de doc">
+       <meta name="keywords" content="html5, tecnologia ">
+       <link rel="shortcut icon" href="img.html/home.png" type="Image/x-icon" />
+       <meta name="viewport"content="width=device-width, initial-scale=1.0">
+       <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+       <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./magnific/magnific-popup.css">
+      <link rel="stylesheet" href="css/estilo.css">
+      <script src="javas/estilo.js"></script>
+
+      <style>
+        /*menu responsivo*/
+.headeru {
+  background-color: #ccc;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  }
+  
+  .headeru ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ccc;
+  }
+  
+  .headeru li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  
+  }
+  
+  .headeru li a:hover,
+  .headeru .menu-btn:hover {
+  background-color: #f4f4f4;
+  }
+  
+  .headeru .logo {
+  display: block;
+  float: left;
+  padding: 3px 20px;
+  text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .headeru .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .headeru .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  }
+  
+  .headeru .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+  }
+  
+  .headeru .menu-icon .navicon:before,
+  .headeru .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  }
+  
+  .headeru .menu-icon .navicon:before {
+  top: 5px;
+  }
+  
+  .headeru .menu-icon .navicon:after {
+  top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .headeru .menu-btn {
+  display: none;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu {
+  max-height: 100%;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+  }
+  
+  .headeru .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .headeru .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 1370px) {
+  .headeru li {
+    float: left;
+  }
+  .headeru li a {
+    padding: 20px 30px;
+  }
+  .headeru .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .headeru .menu-icon {
+    display: none;
+  }
+  }
+
+      </style>
+       
+    </head>
+
+
+<body>
+   <div  class="headeru">
+    <img src="img.html/home.png" alt="Logo - Genshin Impact" class="logo" width="5%">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="index.html">Site Oficial</a></li>
+      <li><a href="atividades.html">Atividades</a></li>
+      <li><a href="https://series-clubb-6xlqcpka7-raquellopes10.vercel.app/">Noticias</a></li>
+    
+      
+    
+    </ul>
+    </div>
+</div>
+ 
+    <!--End of Nav bar-->
+    <!--Header===-->
+    <header class="header">
+        <div class="hero">
+            <h1 class="title">Series'Club</h1>
+            
+  
+    </header>
+    <!--End of Header==================-->
+     <!---=====About Section=====-->
+      <section id="about">
+       <div>
+       <h2 class="title-text">About Us</h2>
+    </div>
+    <div class="about-center">
+        <!---Single item-->
+        <article class="about">
+            
+            <div class="about-text">
+                <h2 class="about-subtitle"> <a class="letra" href="https://series-clubb-6xlqcpka7-raquellopes10.vercel.app/">Notícias</a></h2>
+                <p class="about-info">Notícias sobre series, novelas de todos os gêneros e atualizações sobre lançamentos  !</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+        <article class="about">
+         
+            <div class="about-text">
+                <h2 class="about-subtitle"><a class="letra" href="atividades.html">Atividades</a> </h2>
+                <p class="about-info">Todas a atividades realizadas ao decorrer do semestre!</p>
+            </div>
+        </article>
+        <!--End of single item-->
+        <!---Single item-->
+    </div>   
+   </section>
+
+   <!--=====End of About Section============-->
+   <!---Menu Section---=========-->
+   <section class="menu" id="menu">
+       <article class="menu-image"></article>
+       <article class="menu-text">
+           <div class="menu-text-center">
+               <h1>Notícias</h1>
+               <p> mergulhamos no empolgante mundo das séries de TV, onde histórias envolventes, 
+                personagens cativantes e reviravoltas surpreendentes
+                 mantêm os fãs de entretenimento em suspense e ansiosos por mais.</p>
+                <a href="https://series-clubb-6xlqcpka7-raquellopes10.vercel.app/">Explore</a>
+           </div>
+       </article>
+   </section>
+   <!---End of Menu Section============-->
+   
+   <!---Social Icons-->
+   <section id="social-icons">
+       <a href="#"><i class="fab fa-facebook facebook"></i></a>
+       <a href="#"><i class="fab fa-twitter twitter"></i></a>
+       <a href="#"><i class="fab fa-instagram instagram"></i></a>
+       
+   </section>
+   <!--End of Social Icons-->
+   <!----------============Counter / Numbers-===================-->
+      
+   <!--End of Counter===================-->
+   <!--=======-----------Card Section-----====================-->
+   <section id="food">
+       <div>
+       <h2 class="title-text"> Lançamentos</h2>
+        </div>
+      <div class="food-container">
+              <!--======Card Start ----============-->
+      <article class="food-card">
+              <img src="img.html/theflash.jpg" class="food-img"alt="">
+              <div class="img-text">
+                  <h1>The Flash</h1>
+              </div>
+              <div class="img-footer">
+                  <div class="footer-icon">
+                   
+                  </div>
+                  
+              </div>
+              </article>
+              <article class="food-card">
+                <img src="img.html/seria.jpg" class="food-img"alt="">
+                <div class="img-text">
+                    <h1>A Pequena Sereia</h1>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                      
+                    </div>
+                    
+                </div>
+                </article>
+                <article class="food-card">
+                    <img src="img.html/velozes-e-furiosos-10.jpg" class="food-img"alt="">
+                    <div class="img-text">
+                        <h1>Velozes e Furiosos</h1>
+                    </div>
+                    <div class="img-footer">
+                        <div class="footer-icon">
+                          
+                        </div>
+                        
+                    </article>
+       </div>
+       
+      
+       
+   </section>
+       <!--======End of Card =========-->
+
+     <!--=====End of Card Section=================-->
+       <!--Gallery Section====================-->
+    <section id="gallery">
+        <div>
+        <h2 class="title-text">Gallery</h2>
+     </div>
+     <div id="gallery-center">
+         <article class="gallery-item">
+             <a href="galery.html">
+                <img src="img.html/tyle1.jpg" alt="">
+            </a>
+         </article>
+         <article class="gallery-item">
+            <a href="galery2,.html">
+                <img src="img.html/dois.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="galery3.html">
+                <img src="img.html/stefan-caroline-casamento-tvd.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="galery4.html">
+                <img src="img.html/dark.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="galery5.html">
+                <img src="img.html/strangerthings.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="galery6.html">
+                <img src="img.html/sou_luna.jpg">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="galery7.html">
+                <img src="img.html/theflash.jpg" alt="">
+            </a>
+        </article>
+        <article class="gallery-item">
+            <a href="galery8.html">
+                <img src="img.html/chocolate_com_pimenta.jpg" alt="">
+            </a>
+        </article>
+     </div>
+     </section>
+       <!---End of Gallery Section===========-->
+       <!---footer========-->
+       <footer class="footer">
+
+        <div class="section-center">
+            <p class="text">
+                &copy; <span>Series'Club</span> 
+            </p>
+        </div>
+
+       </footer>
+
+       
+  
+     
+   
+
+
+
+     
+
+
+
+
+<script src="onClickMenu.js"></script>
+<!--Magnific POPup Jquery also-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="magnific/jquery.magnific-popup.min.js"></script>
+<script src="magnific/magnific.js"></script>
+</body>
